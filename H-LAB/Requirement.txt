@@ -1,0 +1,23 @@
+Project Details :
+
+Required Complete Diagnostic Pathological Lab Management Software With ....
+
+## Test And Profile With Grouping.
+
+## Patient, Doctor, Agent, Direct Agent And Other Source Custom Individual and Group Commission Set.
+
+## Stock Maintenance.
+
+## Detailed Accounting Part With Detailed Reporting
+
+## All Reports Must Be Printable and Must Be Allowed to Export as PDF or Excel File
+
+## All Reports Must be Allowed to Be Sent by Email with Customized Mail Body and Attachment
+
+##All report header can be Dynamically Saved by The Client and Must Include a Customized Logo at the Top Left Corner or the Report which Will be Set By The Client
+
+##All reports Must also be Accommodated To be Printed on Pre-Printed Paper with Header and Footer.
+
+## All Test Reports Must Be Customized with automatic comment selected as per test selected.
+
+## All comment in test must be customizable.

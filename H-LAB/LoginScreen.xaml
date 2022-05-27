@@ -1,0 +1,63 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H_LAB"
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" x:Class="H_LAB.LoginScreen"
+        mc:Ignorable="d"
+        Title="H-LAB (A COMPLETE PATHOLOGY SOFTWARE)" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SnapsToDevicePixels="True"   Width="1368" Height="760" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" Cursor="Hand" FontFamily="Poppins Light" FontSize="20" TabIndex="1">
+    <Window.Background>
+        <ImageBrush ImageSource="/lab.jpg" Stretch="Uniform" Opacity="0.21">
+            <ImageBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                    <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </ImageBrush.RelativeTransform>
+        </ImageBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="563*"/>
+            <RowDefinition Height="181*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Margin="484,172,484,172" Width="400" Height="400" Grid.RowSpan="2">
+            <DataGrid.Background>
+                <SolidColorBrush Color="Black" Opacity="0.6"/>
+            </DataGrid.Background>
+        </DataGrid>
+
+        <Border BorderThickness="1" BorderBrush="White" Width="400" Height="3" Background="White" Margin="484,380,484,180"/>
+        <Label Content="Username : " Background="{x:Null}" Foreground="White" Width="128" Height="38" IsEnabled="False" Margin="512,398,728,127"/>
+        <Label Content="Password :" Background="{x:Null}" Foreground="White" Width="128" Height="38" IsEnabled="False" Margin="512,451,728,74"/>
+        <TextBox x:Name="Username" TextWrapping="Wrap" Width="220" Height="38" Background="{x:Null}" Foreground="White" SelectionBrush="#FFFDFEFF" Cursor="Hand" Margin="645,402,503,123" AutomationProperties.Name="Username" TabIndex="1" AcceptsTab="True" MaxLength="10" MaxLines="1" KeyDown="Username_KeyDown"/>
+        <PasswordBox x:Name="UserPassword"  Width="220" Height="38" Background="{x:Null}" Foreground="White" SelectionBrush="#FFFDFEFF" Cursor="Hand" Margin="645,455,503,70" AutomationProperties.Name="Password" TabIndex="2" KeyDown="UserPassword_KeyDown">
+            <dxmvvm:Interaction.Behaviors>
+                <dxmvvm:KeyToCommand/>
+            </dxmvvm:Interaction.Behaviors>
+        </PasswordBox>
+        <Button x:Name="Login" HorizontalAlignment="Center" Margin="0,547,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" Width="100" Height="38" Cursor="Hand" Content="Log in" Grid.RowSpan="2" TabIndex="3" AutomationProperties.Name="Login" MouseEnter="Login_MouseEnter"/>
+        <Label Content="Hello There," HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Poppins SemiBold" Foreground="White" Margin="602,268,0,0"/>
+        <Label Content="Enter your Details" HorizontalAlignment="Left" Margin="602,302,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
+        <Label Content="to Log in," HorizontalAlignment="Left" Margin="602,328,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" IsEnabled="False"/>
+        <Image HorizontalAlignment="Left" Height="165" Margin="797,266,0,0" VerticalAlignment="Top" Width="150" Source="/animationoflab.gif"/>
+        <StatusBar x:Name="License_Details" Grid.Row="1" Margin="10,170,10,0">
+            <Label x:Name="DevelopBy" Content="Developed By : HUB IT GROUP PVT. LTD." Margin="50,0,50,0"/>
+            <Label x:Name="LicenseBy" Content="License By : ........................" Margin="50,0,50,0"/>
+            <Label x:Name="LicenseTo" Content="License To : ........................" Margin="50,0,50,0"/>
+            <Label x:Name="Datetime" Content="Today : "/>
+            <Label x:Name="Datetimenow" Content="Today : " AutomationProperties.Name="Datetimenow">
+                
+            </Label>
+
+            <Label x:Name="LicenseTime" Content="Warranty Period : 260" Margin="50,0,50,0"/>
+        </StatusBar>
+
+
+    </Grid>
+
+
+</Window>

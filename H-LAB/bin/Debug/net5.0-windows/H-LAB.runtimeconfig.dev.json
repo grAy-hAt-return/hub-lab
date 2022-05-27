@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\hbana\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\hbana\\.nuget\\packages",
+      "D:\\devexpress\\Components\\Offline Packages"
+    ]
+  }
+}
